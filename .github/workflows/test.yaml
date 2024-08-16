@@ -21,4 +21,4 @@ jobs:
         with:
           azcliversion: latest
           inlineScript: |
-            az account list-locations
+            az account list-locations --query '[].{name: name, displayName: displayName}' > locations.json
