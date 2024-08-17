@@ -6,45 +6,77 @@
     <title>Azure Regions Project</title>
     <style>
         body {
-            background-color: #F0F8FF; /* AliceBlue - close to Azure's light color */
-            color: #333;
-            font-family: "Arial", sans-serif;
+            background-color: #1E1E1E; /* Dark background */
+            color: #FFFFFF; /* White text for dark mode */
+            font-family: "Comic Sans MS", "Comic Sans", cursive;
         }
         h1 {
             color: #0078D4; /* Azure Blue */
             text-align: center;
-            font-family: "Comic Sans MS", "Comic Sans", cursive;
+            font-size: 48px;
+            text-shadow: 2px 2px 5px #1E90FF; /* DodgerBlue shadow */
+            animation: rainbow 3s infinite;
+        }
+        @keyframes rainbow {
+            0% { color: #0078D4; }
+            25% { color: #32CD32; } /* Lime Green */
+            50% { color: #FF69B4; } /* Hot Pink */
+            75% { color: #FFD700; } /* Gold */
+            100% { color: #0078D4; } /* Azure Blue */
         }
         p {
-            font-size: 14px;
-            line-height: 1.5;
+            font-size: 20px;
+            line-height: 2;
             text-align: center;
             margin: 20px;
         }
         a {
-            color: #0078D4; /* Azure Blue */
+            color: #1E90FF; /* DodgerBlue */
             text-decoration: none;
             font-weight: bold;
         }
         a:hover {
             text-decoration: underline;
+            color: #32CD32; /* Lime Green */
         }
         hr {
-            border: 1px solid #0078D4;
+            border: 3px dashed #0078D4; /* Azure Blue */
             width: 80%;
+            margin: 20px auto;
         }
         .container {
             width: 80%;
             margin: 0 auto;
             padding: 20px;
-            border: 2px solid #0078D4;
-            background-color: #E6F1F8; /* Light Azure Blue */
+            border: 5px solid #0078D4; /* Azure Blue */
+            background-color: #2D2D2D; /* Dark Gray background for contrast */
+            box-shadow: 10px 10px 20px #000; /* Black shadow */
+            overflow: hidden;
+            position: relative;
         }
         .footer {
             text-align: center;
-            font-size: 12px;
+            font-size: 16px;
             margin-top: 20px;
-            color: #666;
+            color: #AAAAAA; /* Light Gray */
+        }
+        .marquee {
+            font-size: 24px;
+            color: #1E90FF; /* DodgerBlue */
+            margin-top: 20px;
+            font-weight: bold;
+            white-space: nowrap;
+            position: absolute;
+            will-change: transform;
+            animation: scroll-left 10s linear infinite;
+        }
+        @keyframes scroll-left {
+            0% {
+                transform: translateX(100%);
+            }
+            100% {
+                transform: translateX(-100%);
+            }
         }
     </style>
     <script>
@@ -55,20 +87,24 @@
     </script>
 </head>
 <body>
-    <h1>Welcome to the Azure Regions Project</h1>
+    <h1>Welcome to the Azure Regions Project!</h1>
     <div class="container">
+        <div class="marquee">🚀 Get the latest Azure Regions data here! 🚀</div>
+        <br />
+        <br />
+        <br />
         <p>Greetings, traveler of the World Wide Web!</p>
-        <p>This project is all about providing you with a simple way to access data about the regions available in Microsoft Azure.</p>
+        <p>This project is all about providing you with a fun and easy way to access data about the regions available in Microsoft Azure.</p>
         <hr>
-        <p>You can view the latest Azure regions data by clicking the link below:</p>
+        <p>Click the link below to view the latest Azure regions data:</p>
         <p><a href="https://azureregions.com/locations.json">Azure Regions Data</a></p>
         <hr>
         <p>What does this project do?</p>
         <p>Using the power of the Azure CLI, we generate a JSON file that contains all the Azure regions. This file is then made available to you through this website, updated daily so you always have the latest information.</p>
-        <p>As a bonus feature, if you stay on this page for more than a minute, you will be automatically redirected to the <a href="https://azureregions.com/locations.json">Azure Regions Data</a> page.</p>
+        <p>As a bonus feature, if you stay on this page for more than a minute, you will be automatically redirected to the <a href="https://azureregions.com/locations.json">Azure Regions Data</a> page. Hang tight!</p>
     </div>
     <div class="footer">
-        <p>&copy; 2024 Azure Regions Project</p>
+        <p>&copy; 2024 Azure Regions Project - Powered by the 90s!</p>
     </div>
 </body>
 </html>
