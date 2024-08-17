@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Azure Regions Project</title>
+    <style>
+        body {
+            background-color: #F0F8FF; /* AliceBlue - close to Azure's light color */
+            color: #333;
+            font-family: "Arial", sans-serif;
+        }
+        h1 {
+            color: #0078D4; /* Azure Blue */
+            text-align: center;
+            font-family: "Comic Sans MS", "Comic Sans", cursive;
+        }
+        p {
+            font-size: 14px;
+            line-height: 1.5;
+            text-align: center;
+            margin: 20px;
+        }
+        a {
+            color: #0078D4; /* Azure Blue */
+            text-decoration: none;
+            font-weight: bold;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        hr {
+            border: 1px solid #0078D4;
+            width: 80%;
+        }
+        .container {
+            width: 80%;
+            margin: 0 auto;
+            padding: 20px;
+            border: 2px solid #0078D4;
+            background-color: #E6F1F8; /* Light Azure Blue */
+        }
+        .footer {
+            text-align: center;
+            font-size: 12px;
+            margin-top: 20px;
+            color: #666;
+        }
+    </style>
+    <script>
+        // Redirect to locations.json after 1 minute (60000 milliseconds)
+        setTimeout(function() {
+            window.location.href = 'https://azureregions.com/locations.json';
+        }, 60000);
+    </script>
+</head>
+<body>
+    <h1>Welcome to the Azure Regions Project</h1>
+    <div class="container">
+        <p>Greetings, traveler of the World Wide Web!</p>
+        <p>This project is all about providing you with a simple way to access data about the regions available in Microsoft Azure.</p>
+        <hr>
+        <p>You can view the latest Azure regions data by clicking the link below:</p>
+        <p><a href="https://azureregions.com/locations.json">Azure Regions Data</a></p>
+        <hr>
+        <p>What does this project do?</p>
+        <p>Using the power of the Azure CLI, we generate a JSON file that contains all the Azure regions. This file is then made available to you through this website, updated daily so you always have the latest information.</p>
+        <p>As a bonus feature, if you stay on this page for more than a minute, you will be automatically redirected to the <a href="https://azureregions.com/locations.json">Azure Regions Data</a> page.</p>
+    </div>
+    <div class="footer">
+        <p>&copy; 2024 Azure Regions Project</p>
+    </div>
+</body>
+</html>
