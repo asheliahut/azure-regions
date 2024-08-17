@@ -8,15 +8,12 @@ on:
 permissions:
   id-token: write
   contents: read
-  pages: write  # Grant GITHUB_TOKEN the permissions required to make a Pages deployment
+  pages: write
 
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout repository
-        uses: actions/checkout@v4
-
       - name: Azure login
         uses: azure/login@v2
         with:
@@ -35,7 +32,8 @@ jobs:
         run: |
           mkdir -p out
           mv locations.json out/
-      
+          echo '<meta http-equiv="refresh" content="0; url=locations.json">' > out/index.html
+
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
