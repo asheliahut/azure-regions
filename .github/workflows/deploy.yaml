@@ -28,7 +28,7 @@ jobs:
         with:
           azcliversion: latest
           inlineScript: |
-            az account list-locations --query '[].{name: name, displayName: displayName}' > locations.json
+            az account list-locations --query '[].{name: name, displayName: displayName, regionalDisplayName: regionalDisplayName, metadata: { regionCategory: metadata.regionCategory, regionType: metadata.regionType}}' > locations.json
 
       - name: Prepare deployment artifact
         run: |
